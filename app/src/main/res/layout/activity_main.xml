@@ -11,30 +11,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Download Image"
-        android:layout_centerInParent="true"/>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="match_parent"
+        android:layout_centerInParent="true" />
+    <TextView
+        android:id="@+id/centeredText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/downloadButton"
-        android:layout_margin="16dp"
-        android:visibility="gone" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_above="@id/lottieAnimationView"
+        android:text="Loading Image"
+        android:visibility="gone"
+        android:textSize="18sp" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/progress_bar"
+        app:lottie_loop="true" />
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/progressBar"
+        android:layout_below="@id/lottieAnimationView"
         android:layout_margin="16dp"
         android:visibility="gone" />
-
     <Button
         android:id="@+id/restartButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Demo Over"
-        android:layout_centerInParent="true"
+        android:text="Restart Demo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
         android:visibility="gone" />
 
 </RelativeLayout>
